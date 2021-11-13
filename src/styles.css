@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  position: relative;
+}
+@media only screen and (max-width: 600px) {
+  header {
+    height: 40px;
+    font-size: 1rem;
+    text-align: center;
+  }
+}

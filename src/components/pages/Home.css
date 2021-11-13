@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&family=Roboto:wght@300&display=swap");
+header {
+  height: 55px;
+  width: 100%;
+  background-color: #4b515d !important;
+  color: #fff;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  font-weight: 300;
+  padding: 10px 10%;
+  font-size: 1.5rem;
+}
+
+.drag-drop-area {
+  max-width: 70%;
+  height: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(202, 202, 202);
+  margin: 50px auto;
+  border-radius: 5px;
+  flex-direction: column;
+  font-family: "Roboto Condensed", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.drag-drop-area.active {
+  border: 2px solid #000;
+}
+
+.drag-drop-area.none {
+  border: none;
+  box-shadow: none;
+  max-width: 40%;
+  height: 300px;
+  border: 1px solid rgb(240, 240, 240);
+}
+
+.drag-drop-area .icon {
+  font-size: 40px;
+  width: 55px;
+  height: 50px;
+  color: rgb(177, 177, 177);
+}
+
+.drag-drop-area p {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 5px 0 5px 0;
+  color: rgb(177, 177, 177);
+}
+#preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  width: 50%;
+  height: 60vh;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+}
+
+#preview #image {
+  transition: all 0.4s;
+  text-align: center;
+}
+#preview #image img {
+  height: 55vh;
+}
+
+.crop-btn {
+  width: 50%;
+  margin: 20px auto 40px auto;
+  text-align: center;
+}
+
+.crop-btn button {
+  width: 100px;
+  background: rgb(56, 119, 236);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+}
+
+/* Editor section style */
+
+.editor-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 20px;
+  margin: 20px 0;
+  z-index: 1;
+}
+
+.editor-area .zoom,
+.rotate {
+  margin: 0 30px;
+  display: flex;
+}
+
+.editor-area .bi {
+  font-size: 1.5rem;
+  margin: 0 8px;
+  cursor: pointer;
+  background: #111;
+  color: #fff;
+  padding: 7px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 5px #999;
+  display: block;
+}
+
+/* form style  */
+
+form {
+  width: 30%;
+  height: 250px;
+  margin: 40px auto;
+  border: 1px solid rgb(206, 206, 206);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+form .radiobtn {
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form .input-feild {
+  padding: 10px;
+  margin: 20px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form .input-feild input {
+  height: 30px;
+  width: 70px;
+  margin: 0 20px;
+  padding: 0 5px;
+}
+form input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+}
+form #btn {
+  width: 100px;
+  height: 35px;
+  border: none;
+  outline: none;
+  background: rgb(0, 110, 255);
+  box-shadow: 0 0 10px #888;
+  margin: 10px auto;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.06rem;
+}
+
+/* download section style */
+
+.wrapper {
+  width: 100%;
+  margin: 20px 0 50px 0;
+  position: relative;
+}
+
+.wrapper .down-cont {
+  width: 300px;
+  background: rgb(208, 253, 208);
+  margin: 20px auto;
+  padding: 10px;
+}
+.wrapper .down-cont span {
+  font-size: 1.1rem;
+}
+.wrapper #down {
+  background: #125c13;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: block;
+  padding: 5px;
+  width: 150px;
+  height: 35px;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgb(85, 84, 84);
+}
+
+.resize-again {
+  display: block;
+  text-align: center;
+  width: 120px;
+  margin: 10px auto;
+  background: #aff7fd;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+/* content styles */
+
+.contents {
+  padding: 10px 15%;
+  font-family: "Roboto Slab", serif;
+}
+.contents h1,
+h2 {
+  margin: 40px 0 0 0;
+}
+.contents p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+/* responsive style */
+@media only screen and (max-width: 600px) {
+  header {
+    height: 40px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .drag-drop-area {
+    max-width: 90%;
+  }
+
+  #preview {
+    margin: 10px auto;
+    width: 90%;
+    height: 50vh;
+  }
+
+  #preview #image {
+    text-align: center;
+  }
+  #preview #image img {
+    height: 50vh;
+  }
+
+  .editor-area .zoom,
+  .rotate {
+    margin: 0 12px;
+  }
+  .editor-area .bi {
+    font-size: 1rem;
+    margin: 0 5px;
+  }
+
+  form {
+    width: 70%;
+    height: 190px;
+    padding: 20px 10px;
+  }
+  form .radiobtn {
+    margin: 10px 0;
+  }
+
+  form .input-feild {
+    padding: 10px 0px;
+    margin: 8px 0;
+  }
+  form .input-feild input {
+    height: 25px;
+    width: 40px;
+    margin: 0 10px;
+  }
+  form input[type="radio"] {
+    width: 15px;
+    height: 15px;
+  }
+  form #btn {
+    width: 90px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+  .contents {
+    padding: 10px 5%;
+  }
+}
